@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     new TypeIt('#write_effect', {
-        strings: ["Computer Science student"],
+        strings: ["Computer Science Engineering student"],
         speed: 50,
         waitUntilVisible: true
     }).go();
