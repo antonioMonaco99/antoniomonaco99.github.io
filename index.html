@@ -1,509 +1,179 @@
 <!DOCTYPE html>
-<html lang="it">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-  <title>Antonio's site</title>
-  <link rel="stylesheet" href="css/indexStyle.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antonio Monaco — Computer Science Engineering</title>
+<meta name="description" content="Portfolio of Antonio Monaco, computer science engineering student at Politecnico di Milano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <nav>
-<!--nav are 2 div for optimaze the mobile view-->
-    <div class="navALL">
 
-      <div class="nav1">
-
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#resume">Resume</a>
-
-      </div>
-
-      <div class="nav2">
-
-        <a href="#Project">Projects</a>
-        <a href="#contact">Contacts</a>
-      
-      </div>
-    
-    </div>
-
+<header class="site-header">
+  <a href="#home" class="logo">AM</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav" id="nav">
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="#learning">Learning</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </nav>
+</header>
 
+<main>
 
-<!--home-->
-  <section id="home" class="section">
-
-    <div class="introHome">
-
-        <h1>Antonio Monaco</h1>
-<!--js references write_effect, it write a sentences with a digit effect-->
-        <div id="write_effect">
-
-         </div>
-
-           <div class="social-icons">
-
-              <a href="https://www.linkedin.com/in/antonio-monaco-212352242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFUS1wUmCTLeuCUyEpjwOLQ%3D%3D">
-                <img src="img/icons8-linkedin-2-90.png" class="socialIconHome" alt="linkedin logo">
-              </a>
-
-              <a href="https://github.com/antonioMonaco99">
-                <img src="img/icons8-github-100.png" class="socialIconHome" alt="github logo">
-              </a>
-
-              <a href="mailto:monaco.antonio1999@gmail.com">
-                <img src="img/icons8-posta-96.png" class="socialIconHome" alt="mail logo">
-              </a>
-
-           </div>
-
-     </div>
-<!--botton whic take to about section-->
-    <a href="#about" class="scroll-button-home">
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-
-        <path fill="none" d="M0 0h24v24H0z" />
-        <path d="M12 15.172L6.414 9.586 7.828 8.172 12 12.344 16.172 8.172 17.586 9.586z" />
-
-      </svg>
-    </a>
-
-  </section>
-<!--about-->
-  <section id="about" class="section">
-<div class="aboutAll">
-
-      <h1 class="sectionTitle">
-        About
-      </h1>
-
-      <h2 class="aboutIntro">
-        Let me introduce myself.<br>
-      </h2>
-
-      <div class="aboutIntro">
-        <img src="img/IMG_3504-removebg-preview.jpg" class="miafoto" alt="my photo">
+  <section id="home" class="hero">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="terminal-title">antonio@portfolio: ~</span>
       </div>
-
-
-      <div class="centerAbout">
-
-        <p>
-          Hello! I'm Monaco Antonio, a passionate and dedicated student of computer science.<br>
-          With a keen interest in technology and innovation,I constantly strive to<br> expand
-          my knowledge and skills in the ever-evolving field of computer science.
-        </p>
-
-      </div>
-
-      <div class="aboutProfileSkill">
-<!--sx table part(profile.about)-->
-        <div class="Profile">
-
-          <table>
-
-            <tr>
-              <th>
-                <h3 class="aboutcolor">
-                  Profile
-                </h3>
-              </th>
-            </tr>
-
-            <tr>
-              <td>
-                Currently, I am a computer science engineering <br>student
-              </td>
-            </tr>
-
-            <tr>
-              <!--space i need into the able-->
-              <td><br></td>
-            </tr>
-
-            <tr>
-              <th class="titleUnder">Full Name:</th>
-            </tr>
-
-            <tr>
-              <td>
-                Monaco Antonio
-              </td>
-            </tr>
-
-            <tr>
-              <th class="titleUnder">
-                Birth date:
-              </th>
-            </tr>
-
-            <tr>
-              <td>
-                20/09/1999
-              </td>
-            </tr>
-
-            <tr>
-              <th class="titleUnder">
-                Email:
-              </th>
-            </tr>
-
-            <tr>
-              <td>
-                monaco.antonio1999@gmail.com
-              </td>
-            </tr>
-
-          </table>
-
+      <div class="terminal-body">
+        <p class="term-line"><span class="prompt">$</span> whoami</p>
+        <h1 class="term-output">Antonio Monaco</h1>
+        <p class="term-output-sm">Computer Science Engineering student at Politecnico di Milano, building projects in Python, data analysis and machine learning. Previously worked in industrial operations, where I developed hands-on problem-solving and team leadership skills.<span class="cursor"></span></p>
+        <div class="hero-actions">
+          <a href="assets/CV_Monaco_Antonio.pdf" class="btn btn-primary" download>Download CV</a>
+          <a href="#contact" class="btn btn-ghost">Contact me</a>
         </div>
-<!--dx table part(Skill.about)-->
-        <div class="Skill">
-
-          <table>
-
-            <tr>
-              <th>
-                <h3 class="aboutcolor">Skills</h3>
-              </th>
-            </tr>
-
-            <tr>
-              <td>
-                Seasoned in leadership, team management, <br>
-                and new personnel training <br>
-                from five years as Deputy Team Leader
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <!--space i need into the table-->
-                <br><br>
-              </td>
-            </tr>
-
-            <tr>
-              <th class="titleUnder">
-                IT skills
-              </th>
-            </tr>
-
-            <tr>
-              <td>
-                C++,C,Javascript,Html,Css,Php,Mysql,Assembly
-              </td>
-            </tr>
-
-          </table>
-
-        </div>
-      </div>
-
-      <div class="AboutButton">
-
-        <a href="CV_Monaco_Antonio.pdf" class="rectangular-button-about">
-          Download cv
-        </a>
-
-        <a href="#contact" class="rectangular-button-about">
-          Hire me
-        </a>
-
       </div>
     </div>
   </section>
 
-
-<!--resume-->
-  <section id="resume" class="section">
-    <div>
-
-      <h1 class="sectionTitle">
-        Resume
-      </h1>
-
-      <p class="resumeTitle">
-        Here is my work experence and education
+  <section id="about" class="about">
+    <h2>About</h2>
+    <div class="about-grid">
+      <p class="about-text">
+        Before Politecnico di Milano, I spent five years as Deputy Team Leader at Eltek S.p.A., coordinating projects and keeping industrial machinery running under real production pressure — training new hires and managing a team along the way. Now I'm applying that same hands-on approach to computer science engineering: microprocessor architecture, C, and the math and physics behind it.
       </p>
-
-    </div>
-<!--work section-->
-      <h3 class="Resume-intro">
-        Work experence
-      </h3>
-
-    <div class="Resume-work">
-
-      <div class="work-data">
-        <!--left part, in mobile view this is in middle page-->
-        <div class="sxWork">
-
-          <h2>
-            Deputy team<br>leader
-          </h2>
-
-          <img src="img/valigetta.png" class="img-resume" alt="briefcase">
-
+      <dl class="spec-list">
+        <div class="spec-row">
+          <dt>Programming</dt>
+          <dd>Python · C · C++ · JavaScript · PHP · SQL</dd>
         </div>
-
-        <div class="workInfo">
-          <!--right part-->
-            <div class="work-when">
-
-              <h2>Eltek s.p.a</h2>
-              <hr>
-              <p>March 2019 - December 2023</p>
-
-              </div>
-          </div>
-      </div>
-
-      <div class="work-description">
-
-        <p>
-            With extensive experience in project coordination and team management across diverse fields, I've
-            successfully led planning and implementation efforts. Additionally, I've honed advanced skills in mechanical
-            and electronic maintenance of industrial machinery, ensuring operational continuity and production
-            efficiency.
-        </p>
-
-      </div>
-
-    </div>
-
-<!--education section-->
-    <div class="Resume-intro">
-
-      <h3>Education</h3>
-
-    </div>
-
-    <div class="Resume-work">
-
-      <div class="work-data">
-
-        <div class="sxWork">
-
-          <h2>Economics<br>attestat</h2>
-          <img src="img/icons8-scuola-100.png" class="img-resume" alt="book">
-
+        <div class="spec-row">
+          <dt>Data &amp; ML</dt>
+          <dd>Pandas · NumPy · Matplotlib · Scikit-learn</dd>
         </div>
-
-        <div class="workInfo">
-
-          <div class="work-when">
-
-            <h2>Istituto Foral</h2>
-            <!--line to divide-->
-            <hr>
-            <p>September 2014 - June 2017</p>
-
-          </div>
+        <div class="spec-row">
+          <dt>Web</dt>
+          <dd>HTML · CSS · MySQL</dd>
         </div>
-      </div>
-
-      <div class="work-description">
-
-        <p>
-          In my economics certificate school, I deepened my skills in financial analysis and business management
-          through specialized courses.
-        </p>
-
-      </div>
+        <div class="spec-row">
+          <dt>Tools</dt>
+          <dd>Git · GitHub · VS Code</dd>
+        </div>
+      </dl>
     </div>
-    </div>
-
-    <br>
-
-    <div class="Resume-work">
-
-      <div class="work-data">
-
-        <div class="sxWork">
-
-          <h2>
-              Computer <br>science<br>diploma
-          </h2>
-
-          <img src="img/icons8-scuola-100.png" class="img-resume" alt="book">
-
-        </div>
-
-        <div class="workInfo">
-
-          <div class="work-when">
-
-            <h2>Istituto Ascanio Sobrero</h2>
-            <!--line to divide-->
-            <hr>
-            <p>September 2017 - June 2019</p>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="work-description">
-
-        <p>
-            In my computer science school, I gained in-depth skills in programming languages such as C, C++, HTML, CSS,
-           JavaScript, PHP, and MySQL. I developed practical projects and participated in exercises to solidify my
-            knowledge and proficiency in these computer technologies.
-        </p>
-
-     </div>
-
-       <br>
-
-    <div class="Resume-work">
-
-      <div class="work-data">
-
-        <div class="sxWork">
-
-          <h2>
-              Computer <br>science<br>engineering<br>degree
-          </h2>
-
-          <img src="img/icons8-scuola-100.png" class="img-resume" alt="book">
-
-        </div>
-
-        <div class="workInfo">
-
-          <div class="work-when">
-
-            <h2>Politecnico di Milano</h2>
-            <!--line to divide-->
-            <hr>
-            <p>September 2024 - still in progress</p>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="work-description">
-
-        <p>
-            In my computer science engineering percorse, i studied the microprocessing of computer and also i have a major interface with the c language.
-            I also learn math and phisics with a better proof ,this help me to have a better problem solving.
-        </p>
-
-     </div>
-  
-  </section>
-<!--project-->
-  <section id="Project" class="section">
-
-    <h1 class="sectionTitle">Projects</h1>
-
-    <div class="BoxContainer">
-
-      <div class="boxProject">
-
-        <a href="#home">
-          <img src="img/Schermata 2024-04-29 alle 10.17.33.png" alt="My site screen">
-        </a>
-
-        <p class="projectName">
-          Antonio's site
-        </p>
-
-      </div>
-
-      <div class="boxProject">
-        <a>
-          <img src="img/coming.jpeg" alt="coming soon">
-        </a>
-
-        <p class="projectName">
-          Coming soon
-        </p>
-      </div>
-
-      <div class="boxProject">
-        <a>
-          <img src="img/coming.jpeg" alt="coming soon">
-        </a>
-
-        <p class="projectName">
-          Coming soon
-        </p>
-      </div>
-    </div>
-
-    <div class="projectSoon"> 
-      <p>Big things are coming!<br><br> Keep following me to discover my new projects!</p>
-    </div>
-
   </section>
 
-<!--contact-->
-  <section id="contact" class="section">
+  <section id="resume" class="resume">
+    <h2>Resume</h2>
+    <ol class="timeline">
+      <li class="timeline-item">
+        <span class="timeline-year">2024—ongoing</span>
+        <div class="timeline-body">
+          <h3>Computer Science Engineering</h3>
+          <p class="timeline-org">Politecnico di Milano</p>
+          <p>Studying computer microprocessing architecture with a strong focus on C, alongside mathematics and physics that sharpen problem-solving.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">2019—2023</span>
+        <div class="timeline-body">
+          <h3>Deputy Team Leader</h3>
+          <p class="timeline-org">Eltek S.p.A.</p>
+          <p>Coordinated projects and led teams across diverse fields, while maintaining the mechanical and electronic systems of industrial machinery to keep production running smoothly.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">2017—2019</span>
+        <div class="timeline-body">
+          <h3>Computer Science Diploma</h3>
+          <p class="timeline-org">Istituto Ascanio Sobrero</p>
+          <p>Built a foundation in C, C++, HTML, CSS, JavaScript, PHP and MySQL through hands-on projects.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-year">2014—2017</span>
+        <div class="timeline-body">
+          <h3>Economics Certificate</h3>
+          <p class="timeline-org">Istituto Foral</p>
+          <p>Studied financial analysis and business management fundamentals.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <h1 class="sectionTitle">Contacts</h1>
-<!--email,linkedn logo and  link-->
-    <div class="BoxContainer">
+  <section id="learning" class="learning">
+    <h2>What I'm learning</h2>
+    <ul class="learning-list">
+      <li>Machine Learning</li>
+      <li>Statistics</li>
+      <li>SQL / Data Analysis</li>
+      <li>FastAPI &amp; REST APIs</li>
+    </ul>
+  </section>
 
-      <div class="boxContact">
-
-          <img src="img/linke.png" alt="linkedn logo">
-
-          <h1 class="projectName">Let's connect</h1>
-
-          <a class="contactLinke" href="https://www.linkedin.com/in/antonio-monaco-212352242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFUS1wUmCTLeuCUyEpjwOLQ%3D%3D">
-            linkedin profile
-          </a>
-
-      </div>
-
-      <div class="boxContact">
-
-        <img src="img/logo email.png " alt="email logo">
-
-        <h1 class="projectName">Email me to:</h1>
-
-        <a href="mailto:monaco.antonio1999@gmail.com" class="contactLinke">
-          monaco.antonio1999@gmail.com
-        </a>
-
-      </div>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <article class="project-card project-live">
+        <p class="project-status">Live</p>
+        <h3>This site</h3>
+        <p>A personal portfolio rebuilt from scratch — static HTML, CSS and a touch of JavaScript, hosted on GitHub Pages.</p>
+        <a href="https://github.com/antonioMonaco99" target="_blank" rel="noopener">View source</a>
+      </article>
+      <article class="project-card">
+        <p class="project-status">01 — Data Science</p>
+        <h3>California Housing Price Prediction</h3>
+        <p>Data analysis and machine learning project for predicting California housing prices — data cleaning, exploratory analysis, visualization, feature preparation, model training and evaluation.</p>
+        <p class="project-tech">Python · Pandas · NumPy · Scikit-learn · Data Analysis · Machine Learning</p>
+        <a href="https://github.com/antonioMonaco99" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="project-card project-empty">
+        <p class="project-status">02 — Planned</p>
+        <h3>Job Market Analytics API</h3>
+        <p>A REST API for collecting, storing and analyzing technology job-market data. Combines a Python backend, MySQL database and data analysis to expose searchable job listings and market statistics.</p>
+        <p class="project-tech">Python · FastAPI · MySQL · SQLAlchemy · Pandas</p>
+        <a href="https://github.com/antonioMonaco99/job-market-analytics-api" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
     </div>
-</section>
-<!--final part,after the section-->
-  <footer>
-    <p>© 2024 Antonio's site</p>
+  </section>
 
-    <div class="back-top">
-<!--button to take me back to top-->
-        <a href="#home" class="scroll-button-footer">
+  <section id="contact" class="contact">
+    <h2>Let's connect</h2>
+    <p class="contact-lede">The fastest way to reach me is email — I check it daily.</p>
+    <div class="contact-links">
+      <a href="mailto:monaco.antonio1999@gmail.com" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        monaco.antonio1999@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/antonio-monaco-212352242" class="contact-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="6.5" r="1"/><path d="M11 17v-4.5a2.5 2.5 0 0 1 5 0V17"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/antonioMonaco99" class="contact-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.4 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+        GitHub
+      </a>
+    </div>
+  </section>
 
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+</main>
 
-              <path fill="none" d="M0 0h24v24H0z" />
-              <path d="M12 8.828l-5.586 5.586 1.414 1.414L12 11.656l4.586 4.586 1.414-1.414z" />
+<footer class="site-footer">
+  <p>&copy; 2026 Antonio Monaco</p>
+</footer>
 
-          </svg>
-         </a>
-      </div>
-    <hr>
-    
-  </footer>
-<!--librery for the effect sentence in home(write_effect)-->
-  <script src="https://cdn.jsdelivr.net/npm/typeit/dist/typeit.min.js"></script>
-<!--javascript-->
-  <script src="js/navTop.js"></script>
-  <script src="js/navActive.js"></script>
-  <script src="js/write_effect_intro.js"></script>
-
+<script src="script.js"></script>
 </body>
-
 </html>
